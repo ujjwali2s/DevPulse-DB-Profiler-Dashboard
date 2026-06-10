@@ -1,0 +1,193 @@
+.staff-schedule-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  font-family: 'Georgia', serif;
+}
+
+.staff-schedule-content {
+  padding: 120px 2rem 2rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Header Section */
+.schedule-header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.schedule-title {
+  font-size: 2.5rem;
+  color: #1e293b;
+  margin: 0 0 0.5rem 0;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.schedule-subtitle {
+  color: #64748b;
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* Main Card */
+.schedule-card {
+  background: white;
+  border-radius: 0;
+  box-shadow: 0 4px 20px rgba(30, 41, 59, 0.08);
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.schedule-card:hover {
+  box-shadow: 0 8px 30px rgba(30, 41, 59, 0.12);
+}
+
+/* Table Container */
+.table-container {
+  overflow-x: auto;
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.schedule-table thead {
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+}
+
+.schedule-table th {
+  padding: 1.5rem 2rem;
+  text-align: left;
+  font-weight: 600;
+  color: #1e293b;
+  font-size: 0.95rem;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+  border: none;
+  border-bottom: 2px solid #cbd5e1;
+}
+
+.schedule-table td {
+  padding: 1.25rem 2rem;
+  color: #374151;
+  font-size: 1rem;
+  border: none;
+  border-bottom: 1px solid #f1f5f9;
+  transition: background-color 0.2s ease;
+}
+
+.schedule-table tr:hover td {
+  background: #f8fafc;
+}
+
+.schedule-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Message States */
+.loading-message,
+.error-message,
+.no-schedule-message {
+  text-align: center;
+  padding: 3rem;
+  font-size: 1.1rem;
+  color: #64748b;
+  background: white;
+  border-radius: 0;
+  box-shadow: 0 4px 20px rgba(30, 41, 59, 0.08);
+  border: 1px solid #e2e8f0;
+}
+
+.error-message {
+  color: #dc2626;
+  border-left: 4px solid #dc2626;
+}
+
+.loading-message {
+  color: #3b82f6;
+  border-left: 4px solid #3b82f6;
+}
+
+.no-schedule-message {
+  color: #64748b;
+  border-left: 4px solid #64748b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .staff-schedule-content {
+    padding: 100px 1rem 1rem 1rem;
+  }
+
+  .schedule-title {
+    font-size: 2rem;
+  }
+
+  .schedule-subtitle {
+    font-size: 1rem;
+  }
+
+  .schedule-table th,
+  .schedule-table td {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .schedule-table th {
+    font-size: 0.85rem;
+  }
+
+  .table-container {
+    margin: 0 -1rem;
+  }
+
+  .schedule-card {
+    margin: 0 -1rem;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .schedule-title {
+    font-size: 1.75rem;
+  }
+
+  .schedule-table th,
+  .schedule-table td {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.85rem;
+  }
+
+  .schedule-table th {
+    font-size: 0.8rem;
+  }
+}
+
+/* Additional modern touches */
+.schedule-table th:first-child {
+  border-radius: 0;
+}
+
+.schedule-table th:last-child {
+  border-radius: 0;
+}
+
+/* Subtle animation for table rows */
+.schedule-table tbody tr {
+  transition: all 0.2s ease;
+}
+
+.schedule-table tbody tr:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(30, 41, 59, 0.05);
+}

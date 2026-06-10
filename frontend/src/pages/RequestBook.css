@@ -1,0 +1,163 @@
+/* Apply Times New Roman and black text throughout 
+body, input, button, h1, h2, h3, p, div {
+  font-family: 'Times New Roman', Times, serif;
+  color: black;
+}
+
+/* Container styling 
+.request-book-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+}
+
+/* Heading 
+.request-book-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Inputs 
+.request-book-container input[type="text"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+/* Buttons 
+.request-book-container button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #09594b;
+  color: white;
+  font-size: 1rem;
+  font-family: 'Times New Roman', Times, serif;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.request-book-container button:hover {
+  background-color: #0a674d;
+}
+
+/* Message text 
+.request-book-container p {
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+/* Book card 
+.requested-book-preview {
+  background-color: white;
+  color: black;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin-top: 20px;
+  text-align: left;
+}
+
+.requested-book-preview h3 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.requested-book-preview p {
+  margin: 5px 0;
+}*/
+
+/* Use Times New Roman and black text site-wide in this component */
+.request-book-container {
+  font-family: 'Times New Roman', Times, serif;
+  color: black;
+  background-color: white;
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+/* Section heading */
+.request-book-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Input styling */
+.request-book-container input[type="text"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: 'Times New Roman', Times, serif;
+  color: black;
+  background-color: #f9f9f9;
+}
+
+/* Search button */
+.request-book-container button {
+  padding: 10px 20px;
+  background-color: #09594b;
+  color: white;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.request-book-container button:hover {
+  background-color: #0a674d;
+}
+
+/* Message display */
+.request-book-container p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+/* Book preview box */
+.requested-book-preview {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.requested-book-preview h3 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.requested-book-preview p {
+  margin: 4px 0;
+}
+
+/* Confirm button inside preview box */
+.requested-book-preview button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #4A148C;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.requested-book-preview button:hover {
+  background-color: #5e1aa3;
+}
+

@@ -1,0 +1,250 @@
+/* Notifications Page Styling */
+.notifications-container {
+  min-height: 100vh;
+  background: #f8fafc;
+  padding: 2rem;
+  padding-top: 80px;
+  font-family: 'Georgia', serif;
+}
+
+.notifications-header {
+  text-align: center;
+  color: #1e293b;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.notifications-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.notifications-list {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(30, 41, 59, 0.08);
+  border: 1px solid #e2e8f0;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.notification-item {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  border: 1px solid #e2e8f0;
+}
+
+/* New/Unread notifications */
+.notification-item.unread {
+  background: #f0f9ff;
+  border-color: #3b82f6;
+  border-left: 4px solid #3b82f6;
+}
+
+.notification-item.unread .notification-message {
+  font-weight: 600;
+  color: #1e293b;
+}
+
+/* Read notifications */
+.notification-item.read {
+  background: #ffffff;
+  border-color: #e2e8f0;
+}
+
+.notification-item.read .notification-message {
+  font-weight: 400;
+  color: #64748b;
+}
+
+.notification-item:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(30, 41, 59, 0.08);
+}
+
+.notification-message {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 0.6rem;
+}
+
+.notification-date {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  font-style: italic;
+}
+
+.notification-actions {
+  margin-top: 0.8rem;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+}
+
+.mark-read-btn {
+  padding: 0.4rem 0.8rem;
+  background: #ffffff;
+  color: #10b981;
+  border: 2px solid #10b981;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mark-read-btn:hover {
+  background: #f0fdf4;
+  border-color: #059669;
+  color: #059669;
+}
+
+/* Empty state */
+.no-notifications {
+  text-align: center;
+  color: #64748b;
+  font-size: 1.2rem;
+  margin-top: 3rem;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+/* Notification Badge for TopBar */
+.notification-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: linear-gradient(45deg, #ef4444, #dc2626);
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.4);
+  animation: pulse 2s infinite;
+  border: 2px solid white;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 2px 8px rgba(239, 68, 68, 0.4);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.6);
+  }
+}
+
+/* Notification types */
+.notification-item.type-return {
+  border-left: 4px solid #10b981;
+}
+
+.notification-item.type-due {
+  border-left: 4px solid #f59e0b;
+}
+
+.notification-item.type-overdue {
+  border-left: 4px solid #ef4444;
+}
+
+.notification-item.type-approval {
+  border-left: 4px solid #3b82f6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .notifications-container {
+    padding: 1rem;
+  }
+  
+  .notifications-header {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .notifications-content {
+    margin: 0;
+  }
+  
+  .notifications-list {
+    padding: 1.5rem;
+  }
+  
+  .notification-item {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .notification-message {
+    font-size: 1rem;
+  }
+  
+  .notification-date {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .notifications-container {
+    padding: 0.5rem;
+  }
+  
+  .notifications-header {
+    font-size: 1.6rem;
+  }
+  
+  .notifications-list {
+    padding: 1rem;
+  }
+  
+  .notification-item {
+    padding: 0.8rem;
+  }
+  
+  .notification-message {
+    font-size: 0.9rem;
+  }
+  
+  .mark-read-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.7rem;
+  }
+}
+
+/* Loading animation */
+.notifications-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  color: #cbd5e1;
+  font-size: 1.2rem;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(203, 213, 225, 0.3);
+  border-top: 4px solid #0ea5e9;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-right: 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

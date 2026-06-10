@@ -1,0 +1,383 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Times New Roman', Times, serif;
+  background-color: white;
+  color: black;
+  overflow-x: hidden;
+}
+
+/* Main homepage content container */
+.home-container {
+  padding: 20px;
+  background-color: white;   /* ✅ Ensure white content bg */
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Top-right sign in/sign up buttons */
+.top-right-buttons {
+  position: absolute;
+  top: 40px;
+  right: 20px;
+}
+
+.top-right-buttons button {
+  margin-left: 10px;
+  padding: 8px 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  background-color: #09594b;     /* ✅ Green button */
+  color: white;                  /* ✅ White text */
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.top-right-buttons button:hover {
+  background-color: #0a674d;
+}
+
+/* Welcome text section */
+.intro-section {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.gothic-title1 {
+  font-size: 48px;
+  font-family: 'Times New Roman', Times, serif;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.description {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 18px;
+  color: black; /* ✅ Black description text */
+}
+
+/* Section with genres and books */
+.explore-section {
+  margin-top: 40px;
+}
+
+.genre-section {
+  margin-bottom: 40px;
+}
+
+.genre-section h2 {
+  margin-bottom: 10px;
+  cursor: pointer;
+  color: #006633;  /* ✅ Dark green for headings */
+  transition: color 0.3s ease;
+}
+
+.genre-section h2:hover {
+  color: #008044;
+}
+
+/* Horizontal row of book cards */
+.book-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* Individual book card */
+.book-card {
+  width: 150px;
+  min-height: 260px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  background-color: #fdfdfd;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.book-card:hover {
+  transform: scale(1.05);
+}
+
+.book-cover {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  background-color: #f4f4f4;
+}
+
+/* Book title and author */
+.book-title {
+  font-weight: bold;
+  padding: 5px 10px 0 10px;
+  color: black;  /* ✅ Black title */
+}
+
+.book-author {
+  font-size: 14px;
+  padding: 0 10px 10px 10px;
+  color: #444;   /* ✅ Dark grey author */
+}
+
+/* Explore more button */
+.explore-more {
+  margin-top: 10px;
+  background: none;
+  color: #09594b;  /* ✅ Green text */
+  border: 2px solid #09594b;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.explore-more:hover {
+  background-color: #09594b;
+  color: white;
+}
+
+/* Search bar */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+  max-width: 500px;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: black;
+}
+
+.search-bar button {
+  padding: 10px 15px;
+  font-size: 1rem;
+  background-color: #09594b;  /* ✅ Green button */
+  color: rgb(30, 77, 23);
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #0a674d;
+}
+
+*{
+  font-family: 'Times New Roman', Times, serif !important;
+}
+/* 
+.search-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.search-button {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #444;
+}
+
+.search-suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: white;
+  border: 1px solid #ccc;
+  z-index: 10;
+  max-height: 250px;
+  overflow-y: auto;
+  font-family: Georgia, serif;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+}
+
+.suggestion-item {
+  padding: 8px 12px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+}
+
+.suggestion-item:hover,
+.suggestion-item:focus {
+  background-color: #f4f4f4;
+  outline: none;
+} */
+
+/* Top-right buttons */
+.top-right-buttons {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 20;
+}
+
+.top-right-buttons button {
+  margin-left: 10px;
+  padding: 8px 14px;
+  font-weight: bold;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.top-right-buttons button:hover {
+  background-color: #f2f2f2;
+}
+
+/* Search bar and suggestions */
+.search-bar {
+  position: relative;
+  margin: 40px auto 20px;
+  max-width: 600px;
+  display: flex;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+  font-size: 16px;
+}
+
+.search-bar button {
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-left: none;
+  border-radius: 0 4px 4px 0;
+  background-color: #eee;
+  cursor: pointer;
+}
+
+.suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  max-height: 250px;
+  overflow-y: auto;
+  background-color: white;
+  border: 1px solid #ccc;
+  z-index: 15;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.suggestions li {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.suggestions li:hover {
+  background-color: #f5f5f5;
+}
+
+/* Book details */
+.book-detail {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 16px;
+  background-color: #fff8f0;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Search results grid */
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 16px;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+.book-grid .book-card {
+  padding: 12px;
+  background-color: #fefefe;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.book-grid .book-card:hover {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.top-right-buttons {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.top-right-buttons button {
+  background-color: #670000;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-family: 'Georgia', serif;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.top-right-buttons button:hover {
+  background-color: #8b0000;
+}
+
+.suggestions {
+  position: absolute;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 40%;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 9;
+  top: 160px;
+  left: 30%;
+  transform: translateX(-50%);
+  font-family: Georgia, serif;
+  padding: 0;
+  margin: 0;
+}
+
+.suggestions li {
+  list-style: none;
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+}
+
+.suggestions li:hover {
+  background-color: #f0f0f0;
+}
+

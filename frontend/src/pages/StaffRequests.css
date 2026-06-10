@@ -1,0 +1,246 @@
+.staff-requests-container {
+  min-height: 100vh;
+  background: #f8fafc;
+  font-family: Georgia, serif;
+}
+
+.staff-requests-content {
+  padding: 120px 20px 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.requests-header {
+  text-align: center;
+  margin: 40px 0;
+  padding: 30px 20px;
+}
+
+.requests-title {
+  font-size: 3rem;
+  color: #374151;
+  margin: 0 0 10px 0;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+.requests-subtitle {
+  font-size: 1.25rem;
+  color: #6b7280;
+  margin: 0;
+  opacity: 0.9;
+}
+
+.loading-message,
+.no-requests-message {
+  text-align: center;
+  padding: 60px 20px;
+  font-size: 1.25rem;
+  color: #6b7280;
+  background: white;
+  border-radius: 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  border: 1px solid #e5e7eb;
+}
+
+.requests-card {
+  background: white;
+  border-radius: 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin: 20px 0;
+  border: 1px solid #e5e7eb;
+}
+
+.requests-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.request-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  background: #fafafa;
+  border: 1px solid #e5e7eb;
+  border-radius: 0;
+  transition: all 0.2s ease;
+}
+
+.request-item:hover {
+  background: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.request-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-grow: 1;
+}
+
+.request-member,
+.request-book,
+.request-status {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.member-label,
+.book-label,
+.status-label {
+  font-weight: 600;
+  color: #4b5563;
+  min-width: 100px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.member-id,
+.book-title {
+  font-size: 1.1rem;
+  color: #1f2937;
+  font-weight: 500;
+}
+
+.book-title {
+  font-style: italic;
+}
+
+.status-badge {
+  padding: 6px 12px;
+  border-radius: 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.status-badge.pending {
+  background: #fef3c7;
+  color: #92400e;
+  border: 1px solid #d97706;
+}
+
+.status-badge.approved {
+  background: #dcfce7;
+  color: #166534;
+  border: 1px solid #16a34a;
+}
+
+.status-badge.rejected {
+  background: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #dc2626;
+}
+
+.request-actions {
+  display: flex;
+  gap: 12px;
+  margin-left: 20px;
+}
+
+.approve-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: #10b981;
+  color: white;
+  border: none;
+  border-radius: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: Georgia, serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.approve-button:hover {
+  background: #059669;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+}
+
+.approve-button:active {
+  transform: translateY(1px);
+}
+
+.button-icon {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .requests-title {
+    font-size: 2.25rem;
+  }
+  
+  .requests-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .staff-requests-content {
+    padding: 120px 15px 30px 15px;
+  }
+  
+  .requests-card {
+    padding: 20px;
+  }
+  
+  .request-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 20px;
+  }
+  
+  .request-actions {
+    margin-left: 0;
+    width: 100%;
+  }
+  
+  .approve-button {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .member-label,
+  .book-label,
+  .status-label {
+    min-width: 80px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .requests-title {
+    font-size: 1.875rem;
+  }
+  
+  .requests-header {
+    margin: 20px 0;
+    padding: 20px 10px;
+  }
+  
+  .request-member,
+  .request-book,
+  .request-status {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  
+  .member-label,
+  .book-label,
+  .status-label {
+    min-width: auto;
+  }
+}

@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'UnifrakturCook', cursive;
+}
+
+.login-container {
+  /*background-image: url('../assets/LB1homepage.jpg');*/
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-box {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.login-box h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-family: 'UnifrakturCook', cursive; 
+}
+
+.login-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"] {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  /*font-family: 'UnifrakturCook', cursive;*/
+  font-family: 'Times New Roman', Times, serif; 
+}
+
+.login-box button {
+  font-size: 1rem;
+  padding: 10px 15px;
+  background-color: #7B3F00; 
+  color: white;
+  border: none;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+  /*font-family: 'UnifrakturCook', cursive;*/
+  font-family: 'Times New Roman', Times, serif; 
+}
+
+.login-box button:hover {
+  background-color: #5e2e00; 
+}
+
+.login-box p {
+  color: red;
+  font-weight: bold;
+  font-family: 'UnifrakturCook', cursive; 
+}

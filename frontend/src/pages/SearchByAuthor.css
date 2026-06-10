@@ -1,0 +1,189 @@
+.search-title-container {
+  /*background-image: url('../assets/bg3.jpg'); /* Replace with your background path */
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+  font-family: 'Georgia', serif;
+  color: #333;
+}
+
+/* Gothic Header */
+.gothic-header {
+  font-size: 2.8em;
+  color: white;
+  text-align: center;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 3px #000;
+}
+
+/* Search input and button row */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.search-bar input {
+  padding: 12px;
+  width: 300px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.search-bar button {
+  padding: 12px 20px;
+  background-color: #5c3d99; /* Purple */
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+  background-color: #4a2c7f;
+}
+
+/* Message text */
+.message {
+  text-align: center;
+  color: yellow;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Book list display */
+.book-list {
+  list-style-type: none;
+  padding: 0;
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  gap: 25px;
+}
+
+/* Individual book card */
+.book-card {
+  background-color: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+  font-size: 16px;
+  line-height: 1.6;
+  transition: transform 0.2s ease;
+}
+
+.book-card:hover {
+  transform: scale(1.01);
+}
+
+.book-card h3 {
+  margin-top: 0;
+  font-size: 1.5em;
+  color: #5c3d99;
+}
+
+/* Clickable text for author/publisher/genre */
+.clickable {
+  color: #5c3d99;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.clickable:hover {
+  color: #3f2968;
+}
+
+/* Modal overlay for details popup */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Modal content box */
+.modal-content {
+  background-color: #fff;
+  padding: 30px;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  position: relative;
+  font-family: 'Georgia', serif;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  font-size: 1.8em;
+  color: #5c3d99;
+  margin-bottom: 15px;
+}
+
+/* Modal close (X) button */
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  color: #000;
+}
+
+.modal-close:hover {
+  color: #000;
+}
+.review-button {
+  background-color: #4b2e83;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  margin-top: 6px;
+  border-radius: 6px;
+  font-family: cursive;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.review-button:hover {
+  background-color: #361f63;
+}
+.request-button {
+  background-color: #7b1fa2; /* Deep purple */
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  margin-top: 10px;
+  border-radius: 6px;
+  font-family: cursive;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.request-button:hover {
+  background-color: #4a0072;
+}
+
+

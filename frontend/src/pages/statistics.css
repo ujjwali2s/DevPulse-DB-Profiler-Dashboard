@@ -1,0 +1,339 @@
+/* Global resets and fonts 
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+  margin: 0;
+  padding: 0;
+  color: #1f2937;
+}
+
+/* Container 
+.stats-container {
+  max-width: 1280px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+}
+
+/* Header 
+.stats-header {
+  margin-bottom: 2rem;
+}
+.stats-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111827;
+}
+.stats-header p {
+  font-size: 1rem;
+  color: #6b7280;
+}
+
+/* Overview Cards 
+.stats-overview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.stats-card {
+  background: white;
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease;
+}
+.stats-card:hover {
+  transform: translateY(-3px);
+}
+.stats-card-icon {
+  margin-right: 0.75rem;
+  font-size: 1.5rem;
+  color: #3b82f6;
+}
+.stats-card-content p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+.stats-card-content h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* Filter Section 
+.stats-filters {
+  margin-bottom: 2rem;
+  background-color: #f9fafb;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+.stats-filters h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.stats-filters select,
+.stats-filters input[type="date"] {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  margin-top: 0.25rem;
+}
+.stats-filters label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+/* Chart Section 
+.stats-chart {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  margin-bottom: 2rem;
+}
+.stats-chart h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #1f2937;
+}
+
+/* Loading Spinner 
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+.spinner .animate-spin {
+  border: 4px solid #e5e7eb;
+  border-top: 4px solid #3b82f6;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+/* Spinner animation 
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive 
+@media (max-width: 768px) {
+  .stats-overview {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  .stats-overview {
+    grid-template-columns: 1fr;
+  }
+}*/
+
+/*2nd one by gpt
+/* General page background */
+.dashboard-container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 120px 24px 24px 24px;
+  background-color: #f9fafb; /* very light gray*/ 
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1f2937; /* dark slate gray */
+}
+
+/* Header */
+.dashboard-header {
+  margin-bottom: 32px;
+}
+
+.dashboard-header h1 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #111827; /* almost black */
+  margin-bottom: 6px;
+}
+
+.dashboard-header p {
+  font-size: 1.125rem;
+  color: #4b5563; /* gray-600 */
+}
+
+/* Overview Cards Grid */
+.overview-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+/* Individual Card */
+.card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgb(0 0 0 / 0.1);
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 6px 12px rgb(0 0 0 / 0.15);
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+}
+
+/* Colors for icons */
+.icon-blue {
+  color: #2563eb; /* blue-600 */
+}
+
+.icon-green {
+  color: #16a34a; /* green-600 */
+}
+
+.icon-cyan {
+  color: #0891b2; /* cyan-600 */
+}
+
+.icon-orange {
+  color: #f97316; /* orange-500 */
+}
+
+.icon-yellow {
+  color: #ca8a04; /* yellow-700 */
+}
+
+/* Card Text */
+.card-label {
+  font-size: 0.875rem;
+  color: #6b7280; /* gray-500 */
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.card-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #111827; /* almost black */
+}
+
+/* Filters Section */
+.filters-container {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgb(0 0 0 / 0.1);
+  padding: 24px;
+  margin-bottom: 40px;
+}
+
+.filters-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  color: #4b5563;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.filters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+/* Form labels*/
+label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+/* Inputs and selects */
+select,
+input[type="date"] {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1.5px solid #d1d5db; /* gray-300 */
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #111827;
+  transition: border-color 0.2s ease;
+  box-sizing: border-box;
+}
+
+select:focus,
+input[type="date"]:focus {
+  outline: none;
+  border-color: #2563eb; /* blue-600 */
+  box-shadow: 0 0 4px #93c5fd; /* blue-300 glow */
+}
+
+
+.chart-container {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgb(0 0 0 / 0.1);
+  padding: 24px;
+  margin-bottom: 40px;
+}
+
+.chart-header {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #111827;
+}
+
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 16rem;
+}
+
+.loading-spinner > div {
+  border: 4px solid #cbd5e1; 
+  border-top: 4px solid #2563eb;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive tweaks */
+@media (max-width: 640px) {
+  .filters-grid {
+    grid-template-columns: 1fr;
+  }
+}

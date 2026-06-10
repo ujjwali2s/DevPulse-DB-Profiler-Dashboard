@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'UnifrakturCook', cursive;
+}
+
+.home-container {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  min-height: 100vh;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-content {
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.welcome-section {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-top: 1rem;
+}
+
+.welcome-section h1, .welcome-section h2 {
+  font-family: 'UnifrakturCook', cursive;
+  color: #1e293b;
+  margin-bottom: 0.8rem;
+  text-shadow: none;
+}
+
+.welcome-section h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.3rem;
+}
+
+.welcome-section h2 {
+  font-size: 1.1rem;
+  color: #64748b;
+}
+
+.search-buttons-section {
+  margin-bottom: 2.5rem;
+  flex: 0 0 auto;
+}
+
+.home-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 1.2rem 0;
+}
+
+/* Stylish Buttons */
+button {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  color: #1e293b;
+  cursor: pointer;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 500;
+  padding: 0.6em 1em;
+  position: relative;
+  font-size: 0.85rem;
+  min-width: 140px;
+}
+
+button > span {
+  display: block;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+button:hover > span {
+  transform: scale(1.05);
+}
+
+button:active > span {
+  transform: scale(0.95);
+}
+
+button > svg {
+  fill: #64748b; 
+  position: absolute;
+  top: -5%;
+  left: -5%;
+  width: 110%;
+  height: 110%;
+  z-index: 0;
+}
+
+button > svg > path {
+  transition: 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+button:hover > svg > path {
+  d: path("M0,0 C0,-5 100,-5 100,0 C105,0 105,100 100,100 C100,105 0,105 0,100 C-5,100 -5,0 0,0");
+}
+
+button:active > svg > path {
+  d: path("M0,0 C30,10 70,10 100,0 C95,30 95,70 100,100 C70,90 30,90 0,100 C5,70 5,30 0,0");
+}
+
+/* Book Suggestions Section */
+.book-suggestions-section {
+  margin-top: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.book-suggestions-section h3 {
+  text-align: center;
+  color: #1e293b;
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  font-family: 'UnifrakturCook', cursive;
+  flex: 0 0 auto;
+}
+
+.scrolling-books-container {
+  overflow: hidden;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 6px;
+  box-shadow: 0 2px 12px rgba(30, 41, 59, 0.08);
+  border: 1px solid #e2e8f0;
+  padding: 1.5rem 0;
+  flex: 1;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+}
+
+.scrolling-books {
+  display: flex;
+  gap: 1.5rem;
+  animation: scroll-left 30s linear infinite;
+}
+
+/* Hide default scrollbar */
+.scrolling-books::-webkit-scrollbar {
+  display: none;
+}
+
+.scrolling-books {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.book-card {
+  min-width: 140px;
+  max-width: 140px;
+  background: #f8fafc;
+  border-radius: 8px;
+  padding: 0.5rem;
+  text-align: center;
+  border: 1px solid #e2e8f0;
+  transition: transform 0.2s ease;
+  height: 240px;
+  display: flex;
+  flex-direction: column;
+}
+
+.book-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(30, 41, 59, 0.12);
+}
+
+.book-cover {
+  height: 180px;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex: 1;
+}
+
+.book-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 3px;
+  box-shadow: 0 2px 8px rgba(30, 41, 59, 0.1);
+}
+
+.book-cover-fallback {
+  font-size: 2.8rem;
+  color: #64748b;
+}
+
+.book-info {
+  flex-shrink: 0;
+  height: auto;
+  min-height: 40px;
+}
+
+.book-info h4 {
+  color: #1e293b;
+  font-size: 0.8rem;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+  font-family: 'Georgia', serif;
+  line-height: 1.2;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.book-info p {
+  color: #64748b;
+  font-size: 0.7rem;
+  margin: 0 0 0.3rem 0;
+  font-family: 'Georgia', serif;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.book-genre {
+  background: #e2e8f0;
+  color: #475569;
+  font-size: 0.7rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+.loading-container {
+  text-align: center;
+  padding: 3rem;
+  color: #64748b;
+  font-style: italic;
+}
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Scroll arrows styling */
+.scroll-arrow {
+  background: rgba(255,255,255,0.9);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(30,41,59,0.15);
+  transition: all 0.2s ease;
+  color: #1e293b;
+}
+
+.scroll-arrow:hover {
+  background: rgba(255,255,255,1);
+  box-shadow: 0 4px 12px rgba(30,41,59,0.2);
+  transform: scale(1.1);
+}
+
+/* Scroll arrows styling */
+.scroll-arrow {
+  background: rgba(255,255,255,0.9);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(30,41,59,0.15);
+  transition: all 0.2s ease;
+  color: #1e293b;
+}
+
+.scroll-arrow:hover {
+  background: rgba(255,255,255,1);
+  box-shadow: 0 4px 12px rgba(30,41,59,0.2);
+  transform: scale(1.1);
+}
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .home-container {
+    padding-top: 90px;
+  }
+  
+  .home-content {
+    padding: 15px;
+  }
+  
+  .home-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  button {
+    min-width: 200px;
+  }
+  
+  .welcome-section h1 {
+    font-size: 1.5rem;
+  }
+  
+  .welcome-section h2 {
+    font-size: 1rem;
+  }
+  
+  .book-card {
+    min-width: 130px;
+    padding: 0.8rem;
+  }
+  
+  .book-cover {
+    font-size: 2rem;
+  }
+}

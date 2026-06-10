@@ -1,0 +1,315 @@
+/* /* .dashboard {
+  padding: 50px;
+  font-family: serif;
+  background-image: url('../assets/bg2.jpg');
+  background-size: cover;
+  height: 100vh;
+  color: white;
+} *
+
+
+.dashboard-container {
+  padding: 20px;
+  position: relative;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+}
+
+.dashboard-greeting {
+  text-shadow: none;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.hamburger-wrapper {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+/* Hamburger icon styles *
+.hamburger-icon {
+  font-size: 30px;
+  cursor: pointer;
+  user-select: none;
+  color: #333;
+  padding: 5px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.hamburger-icon:hover {
+  background-color: #ddd;
+}
+
+/* Dropdown menu styles *
+.hamburger-menu {
+  position: absolute;
+  right: 0;
+  margin-top: 10px;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  min-width: 180px;
+  z-index: 1000;
+}
+
+.hamburger-menu a {
+  padding: 12px 15px;
+  border-bottom: 1px solid #eee;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.hamburger-menu a:last-child {
+  border-bottom: none;
+}
+
+.hamburger-menu a:hover {
+  background-color: #f0f0f0;
+}
+
+.dashboard-section {
+  margin: 30px 0;
+}
+
+.book-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.book-card {
+  width: 120px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.book-cover {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.book-title {
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.book-author {
+  font-size: 0.9em;
+  color: gray;
+}
+
+
+.dashboard-greeting-container {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.dashboard-greeting {
+  font-size: 28px;
+  font-weight: 700;
+  color: #2563eb;
+  margin-bottom: 8px;
+}
+
+.dashboard-welcome-message {
+  font-size: 16px;
+  color: #555;
+  font-style: italic;
+}
+
+.dashboard-topbar-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 20px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  flex-wrap: wrap;
+}
+
+.dashboard-topbar-search {
+  flex-grow: 1;
+  min-width: 250px;
+}
+
+.dashboard-topbar-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.topbar-icon {
+  cursor: pointer;
+  color: #333;
+  transition: color 0.2s ease;
+}
+
+.topbar-icon:hover,
+.topbar-icon:focus {
+  color: #7b2ff7; /* accent color *
+  outline: none;
+}
+
+/* Make book rows nicely wrap and space *
+.book-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 12px;
+}
+
+/* Book card styling: tweak sizes and spacing *
+.book-card {
+  width: 160px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.book-cover {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.book-title {
+  font-weight: 600;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.book-author {
+  font-size: 12px;
+  color: #666;
+  margin-top: 2px;
+}
+
+Other existing styles like error-message, greeting, etc. remain unchanged */
+
+
+/* Padding top accounts for fixed top bar height + some spacing */
+.dashboard-main {
+  padding: 72px 20px 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+}
+
+.dashboard-greeting {
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+  color: #3a0ca3;
+}
+
+.error-message {
+  background: #fddede;
+  border: 1px solid #f44336;
+  color: #b00020;
+  padding: 10px 15px;
+  border-radius: 6px;
+  margin-bottom: 18px;
+}
+
+.dashboard-section {
+  margin-bottom: 48px;
+}
+
+.dashboard-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 14px;
+  color: #720026;
+}
+
+.book-row {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  scrollbar-width: thin;
+  scrollbar-color: #720026 #f0e7ff;
+}
+
+.book-row::-webkit-scrollbar {
+  height: 8px;
+}
+
+.book-row::-webkit-scrollbar-thumb {
+  background-color: #720026;
+  border-radius: 4px;
+}
+
+.book-card {
+  flex: 0 0 140px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgb(58 12 163 / 0.2);
+  padding: 10px;
+  background: #f9f6ff;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  user-select: none;
+}
+
+.book-card:hover,
+.book-card:focus {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 16px rgb(58 12 163 / 0.4);
+  outline: none;
+}
+
+.book-cover {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: inset 0 0 6px #720026;
+}
+
+.book-title {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 4px;
+  color: #3a0ca3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.book-author {
+  font-size: 0.85rem;
+  color: #720026;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.see-more-btn {
+  background-color: #3a0ca3;
+  color: #f9f6ff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+  margin-top: 12px;
+}
+
+.see-more-btn:hover,
+.see-more-btn:focus {
+  background-color: #720026;
+  outline: none;
+}
